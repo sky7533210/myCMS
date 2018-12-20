@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+}
+#top{
+    height: 80px;
+    width: 100%;
+    background: #fafafb;
+}
+#statubox{
+    width: 70%;
+    height: 100%;
+    margin: 0px auto;
+}
+#statu{
+    height: 100%;
+    float: right;
+}
+
+#userimg{
+    float: right;
+    margin-top: 27px;
+}
+#username{
+    float: right;
+    margin-top: 27px;
+    margin-left: 5px;
+}
+#exit{
+    float: right;
+    margin-top: 27px;
+    margin-left: 10px;
+    background: #f00;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#exit a{
+    text-decoration: none;
+    color: #fff;
+    line-height: 25px;
+}
+#exit:hover{
+    background: #b00;
+}
+#navbar{
+    height: 50px;
+    background: #21304a;
+    margin-top:0px;
+}
+#navbarbox{
+    height: 50px;
+    width: 70%;
+    margin: 0px auto;
+}
+#navbarbox a{
+    display: block;
+    height: 50px;
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+}
+#navbarbox ul li:hover{
+    font-size: 18px;
+    background: #407cA0;
+}
+#navbarbox ul{
+    width: 1000px;
+    list-style-type: none;
+    height: 50px;
+    margin: 0px auto;
+}
+#navbarbox ul li{
+    height: 50px;
+    float: left;
+    width:200px;
+    font-size: 16px;
+    line-height: 50px;
+    text-align: center;
+    letter-spacing: 5px;
+}
+#contentbox {
+    width:70%;
+    height:200%;
+    margin: 0px auto;
+    border-right: solid 1px #cccccc;
+    border-left: solid 1px #cccccc;
+    border-bottom: solid 1px #cccccc;
+}
+.selected{
+    color:#111;
+    font-size: 22px;
+}

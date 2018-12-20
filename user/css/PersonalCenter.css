@@ -1,0 +1,16 @@
+ul{
+    list-style: none;
+    padding-left: 0px;
+    width: 300px;
+    margin: 0px auto;
+}
+.aa{
+    text-align: right;
+    width:80px;
+}
+ul li p{
+    float: left;
+}
+a{
+    text-decoration: none;
+}

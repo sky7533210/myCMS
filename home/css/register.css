@@ -1,0 +1,155 @@
+body{
+   padding: 0px;
+    margin: 0px;
+}
+#top{
+    margin: 0px auto;
+    height: 80px;
+    width: 70%;
+}
+#banner{
+    background: url("../../images/registerbg.jpg");
+    width: 100%;
+    height: 580px;
+    padding-top: 30px;
+}
+#main{
+    margin-right:  auto;
+    margin-left: auto;
+    width:340px;
+    height:540px;
+    background: rgba(255,255,255,0.5);
+    border:solid 1px #ffffff ;
+    border-radius:10px;
+}
+#head{
+    color:#fff;
+    font-size:24px;
+    text-align: center;
+    font-weight:700;
+    line-height: 70px;
+}
+p{
+    font-size:20px;
+    margin-left:20px;
+    margin-top:0px;
+    height: 20px;
+}
+.text{
+    position: relative;
+    top:-40px;
+    margin-left:110px;
+    width:200px;
+    height:25px;
+    border:solid 1px #fff;
+    border-radius:5px;
+}
+#btnregister{
+    display: block;
+    width:255px;
+    margin-left:auto;
+    margin-right: auto;
+    height:30px;
+    font-size: 20px;
+    background: #3d799d;
+    border: solid 1px #fff;
+    color:#fff;
+    border-radius:6px;
+    text-align: center;
+    margin-top:-20px;
+}
+#main form a:hover{
+    background: #023e62;
+}
+#back{
+    display: block;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+#main a:hover{
+    color: #3d799d;
+}
+a{
+    text-decoration: none;
+    color:#000;
+}
+#cover{
+    display: none;
+    position: absolute;
+    background: rgba(60,60,60,0.5);
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    z-index: 120;
+}
+#messagebox{
+    width:250px;
+    height: 150px;
+    margin: 250px auto;
+    background: #eee;
+}
+#message{
+    width:100%;
+    text-align: center;
+}
+h4{
+    font-size: 20px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid #ccc 1px;
+}
+.btn{
+    display:block;
+    width:33%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    color: #375567;
+    text-align: center;
+    margin-top: 20px;
+}
+#btnclose{
+    float: left;
+}
+#tologin{
+    float: right;
+}
+#tip{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-top: -195px;
+    margin-left: 150px;
+    display: none;
+    width:200px;
+    height:30px;
+    border:1px solid #000;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #fff;
+}
+/* 提示框小角的小方块 */
+#tip #inner{
+    background-color:#FFF;
+    width:10px;
+    height:10px;
+    border:1px solid #000;
+    /* 旋转小方块并调整位置形成尖角 */
+    position: relative;
+    left:-6px;
+    top:10px;
+    transform:rotate(45deg);
+    border-right:0px;
+    border-top:0px;
+}
+#tiptext{
+    position: relative;
+    top: -5px;
+    left: 10px;
+}
+#messagebox a:hover{
+    color:#407cA0;
+    font-size:18px;
+}

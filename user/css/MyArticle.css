@@ -1,0 +1,62 @@
+table{
+    width: 70%;
+    margin: 0 auto;
+}
+.delete:hover{
+    background: #ddd;
+}
+.update:hover{
+    background: #ddd;
+}
+#updatebox{
+    display: none;
+}
+#updatebox ul{
+    list-style: none;
+    padding-left: 0px;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+.bb{
+    width: 100px;
+    text-align: right;
+}
+.aa{
+    position: relative;
+    left: 100px;
+    top:-35px;
+}
+#bu{
+    margin-top: -20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+#type{
+    display: block;
+    width: 161px;
+    height: 24px;
+}
+#content{
+    width: 880px;
+    height: 400px;
+}
+#back{
+    margin-top: 0px;
+    height: 30px;
+}
+#back a{
+    margin-left: 20px;
+    line-height: 24px;
+    font-size: 20px;
+}
+#back:hover{
+    background:#407cA0;
+}
+table tr{
+    border: 1px solid #777;
+}

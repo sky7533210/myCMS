@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+   <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/md5.js"></script>
+</head>
+<body>
+<div id="cover">
+    <div id="messagebox">
+        <h4 style="text-align: center">提示</h4>
+        <div id="message">用户名或密码错误</div>
+        <a href="javascript:void(0)" id="btnclose">关闭</a>
+    </div>
+</div>
+<div id="top">
+    <img src="../images/logo.png" height="80px">
+</div>
+<div id="banner">
+<div id="main">
+<div id="head">
+    用户登入
+</div>
+    <form>
+        <ul>
+            <li><p> 账户：</p><p><input type="text"  placeholder="请输入注册时的账号" class="text" maxlength="50" id="userid"/></p></li>
+            <li><p>密码：</p><p><input type="password" placeholder="请输入注册时密码" class="text" maxlength="50" id="password"/></p></li>
+            <li><p><p><a href="javascript:void(0)"  id="btnlogin">登录</a></p></li>
+            <li><p><a href="register.html" id="registered">会员注册</a></p><p> <a href="forgetpwd.php" id="forget">忘记密码</a></p></li>
+        </ul>
+    </form>
+</div>
+</div>
+</body>
+<script>
+    $(function () {
+        $("#btnlogin").click(function() {
+                var userid=$("#userid").val();
+                var password=$("#password").val();
+                if ($.trim(userid) == '') {
+                    $("#message").text('用户名不能为空');
+                    $("#cover").fadeIn(100);
+                    $("#userid")[0].focus();
+                    return false;
+                }
+
+                if ($.trim(password) == '') {
+                    $("#message").text('密码不能为空');
+                    $("#cover").fadeIn(100);
+                    $("#password")[0].focus();
+                    return false;
+                }
+                if(checkidisnum(userid))
+                    return false;
+                $.ajax({
+                    url: 'action/loginaction.php',
+                    type: 'post',
+                    data: {
+                        'userid':userid,
+                        'password':$.md5(password)
+                    },
+                    dataType: 'json',
+                    success: function (response) {
+                        var data = eval("("+response+")");
+                        if(data.statu==0){
+                            $("#message").text(data.message);
+                            $("#cover").fadeIn(100);
+                        }else{
+                           window.location.href="../index.php";
+                        }
+                    }
+                });
+            }
+        );
+        $("#btnclose").click(function() {
+            $("#cover").fadeOut(1000);
+        });
+    });
+</script>
+</html>

@@ -1,0 +1,52 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+#top{
+    height: 80px;
+    width: 70%;
+    margin: 0px auto;
+}
+#banner{
+    position: absolute;
+    background: url("../../images/forgetbg.jpg");
+    width: 100%;
+    height: 600px;
+}
+table{
+    background: rgba(255,255,255,0.4);
+    margin: 150px auto;
+    font-size: 20px;
+
+}
+.aa{
+    text-align: right;
+}
+td{
+    width:180px;
+}
+tr{
+   height: 40px;
+}
+tr .center{
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: #e93950;
+}
+#submit{
+    background: #f8e98c;
+    padding: 3px 20px;
+}
+#submit:hover{
+    font-size: 22px;
+}
+a:hover{
+    font-size: 22px;
+}
+input{
+    font-size: 18px;
+    border: 1px solid #888;
+    border-radius:5px;
+}

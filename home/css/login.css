@@ -1,0 +1,119 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+#top{
+    height: 80px;
+    width: 70%;
+    margin: 0px auto;
+}
+#banner{
+    background: url("../../images/bglogin.jpg");
+    width: 100%;
+    height: 500px;
+}
+#main{
+    position: absolute;
+    left: 60%;
+    top:150px;
+    width:300px;
+    height:300px;
+    background: rgba(255,255,255,0.5);
+    border:solid 1px #ffffff ;
+    border-radius:10px;
+}
+#head{
+    color:#fff;
+    font-size:24px;
+    text-align: center;
+    font-weight:700;
+    line-height: 70px;
+}
+p{
+  float: left;
+}
+.text{
+    width:200px;
+    height:25px;
+    border:solid 1px #fff;
+    border-radius:5px;
+}
+ul{
+    list-style: none;
+    font-size:20px;
+    margin-left: -23px;
+}
+li{
+    margin-top:-30px;
+}
+ #btnlogin{
+     display: block;
+    width:255px;
+    margin-left:5px;
+    height:30px;
+    font-size: 20px;
+    background: #8eceea;
+    border: solid 1px #fff;
+    color:#fff;
+    border-radius:6px;
+     text-align: center;
+     margin-top:-20px;
+}
+  #main form a:hover{
+     background: #8eceea;
+ }
+#registered{
+  margin-left: 8px;
+}
+#forget{
+    margin-left:90px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color:#000;
+    margin-top: -20px;
+}
+#box2 a:hover{
+    color:#8eceea;
+}
+#cover{
+    display: none;
+    position: fixed;
+    background: rgba(60,60,60,0.5);
+    width: 100%;
+    height: 100%;
+    z-index: 120;
+}
+#messagebox{
+    width:250px;
+    height: 150px;
+    margin: 250px auto;
+    background: #eee;
+}
+#message{
+    width:100%;
+    text-align: center;
+}
+h4{
+    font-size: 20px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    border-bottom: solid #ccc 1px;
+}
+#btnclose{
+    display:block;
+    margin: 20px auto;
+    width:33%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 16px;
+    color: #fff;
+    background: #8eceea;
+    border-radius:12px;
+    text-align: center;
+}
+#messagebox a:hover{
+    background: #2E849d;
+}

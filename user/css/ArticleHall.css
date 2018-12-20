@@ -1,0 +1,111 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+}
+#typelist {
+    background: #21304a;
+    width: 150px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    margin-top: 0px;
+    padding: 0px;
+}
+#typelist li{
+    text-align: center;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    border-bottom: solid 1px #1c5c78;
+    color: #fff;
+}
+#typelist li:hover{
+    background: #407cA0;
+}
+#content{
+    margin-left: 150px;
+    height: 100%;
+}
+#titlelist{
+    width: 100%;
+    height: 100%;
+}
+#textbody{
+    width: 100%;
+    height: auto;
+}
+#back{
+    margin-top: 0px;
+    height: 30px;
+}
+#back a{
+    margin-left: 20px;
+    line-height: 24px;
+    font-size: 20px;
+}
+#back:hover{
+    background:#407cA0;
+}
+#text{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: auto;
+    height: auto;
+}
+#writecomment{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+#listcomment{
+    background: #eee;
+    margin-left: 30px;
+    margin-right: 90px;
+    margin-top: 70px;
+}
+#aaa{
+    float: left;
+}
+#writecomment form textarea{
+    float: left;
+}
+#publish{
+    width: 100%;
+    text-align: center;
+}
+#content a{
+    text-decoration: none;
+    float: left;
+    margin-right: 30px;
+}
+#content table{
+    float:left;
+}
+#table2{
+    margin-left: 30px;
+    border-left: solid 1px #cccccc;
+}
+.tablehead{
+    height: 60px;
+}
+#content table tr td{
+    text-align: center;
+}
+#content table tr:hover{
+    background: #cccccc;
+}
+.aa{
+    width :130px;
+}
+.bb{
+    width: 130px;
+}
+#typelist .selected{
+    background: #fff;
+    color: #000;
+    border-left: solid 2px #1c5c78;
+}

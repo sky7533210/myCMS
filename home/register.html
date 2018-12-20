@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户注册</title>
+    <link rel="stylesheet" type="text/css" href="css/register.css">
+    <script src="../js/jquery-1.10.2.js"></script>
+    <script src="../js/check.js"></script>
+    <script src="../js/md5.js"></script>
+</head>
+<body>
+<div id="cover">
+    <div id="messagebox">
+        <h4 style="text-align: center">提示</h4>
+        <div id="message">注册成功</div>
+        <a href="login.html" id="tologin" class="btn">去登入</a>
+        <a href="javascript:void(0)"  id="btnclose" class="btn">继续注册</a>
+    </div>
+</div>
+<div id="tip">
+    <div id="inner"></div>
+    <div id="tiptext">该账户已存在</div>
+</div>
+<div id="top">
+    <img src="../images/logo.png" height="80px">
+</div>
+<div id="banner">
+<div id="main">
+    <div id="head">
+        用户注册
+    </div>
+    <form>
+        <p>账&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp户：</p><input type="text"  placeholder="请输入注册账号" class="text" maxlength="50" id="userid" />
+        <p>密&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp码：</p> <input type="password" placeholder="请输入密码" class="text" maxlength="50" id="password"/>
+        <p>确认密码：</p> <input type="password" placeholder="请输入密码" class="text" maxlength="50" id="checkpassword"/>
+        <p>昵&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp称：</p><input type="text" placeholder="你输入昵称" class="text" maxlength="50" id="username" />
+        <p>密保问题：</p><input type="text" placeholder="请输入密保问题" class="text" maxlength="50" id="question"/>
+        <p>密保答案：</p><input type="text" placeholder="请输入密保答案" class="text" maxlength="50" id="answer"/>
+        <a href="javascript:void(0)" id="btnregister">注册</a>
+    </form>
+    <script>
+        $(document).ready(function () {
+        function cancletip() {
+            $("#tip").fadeOut(1000);
+        }
+        $("#userid").focus(cancletip);
+        $("#checkpassword").focus(cancletip);
+        $("#btnregister").click(function() {
+            var userid=$("#userid").val();
+            var password=$("#password").val();
+            var username=$("#username").val();
+            var question=$("#question").val();
+            var answer=$("#answer").val();
+            if ($.trim(userid) == ''||$.trim(password)==''||$.trim(userid)==''||$.trim(question)==''||$.trim(answer)=='') {
+                alert('请把信息填写完整');
+                return false;
+            }
+            if(checkidisnum(userid))
+                return false
+            $.ajax({
+                url: 'action/registeraction.php',
+                type: 'post',
+                data: {
+                    'userid':userid,
+                    'password':$.md5(password),
+                    'username':username,
+                    'question':question,
+                    'answer':answer
+                },
+                dataType: 'json',
+                success: function (response) {
+                    var data = eval("("+response+")");
+                    if(data.statu==1){
+                        $("#message").text('注册成功');
+                        $("#cover").fadeIn(1000);
+                    }else{
+                        $("#message").text('注册失败');
+                        $("#cover").fadeIn(1000);
+                    }
+                }
+            });
+        });
+       $("#checkpassword").blur(function() {
+            var password=$("#password").val();
+            var checkpassword=$("#checkpassword").val()
+            if(password!=checkpassword){
+                $("#tiptext").text('确认密码与原密码不一致');
+                $("#tip").css("margin-top","-60px");
+                $("#tip").fadeIn(500);
+            }
+        });
+       $("#userid").blur(function () {
+            var userid=$("#userid").val();
+            if ($.trim(userid) == '') {
+                $("#tiptext").text('用户名不能为空');
+                $("#tip").css("margin-top","-200px");
+                $("#tip").fadeIn(500);
+                return false;
+            }
+            $.ajax({
+                url: 'action/checkuserid.php',
+                type: 'post',
+                data: {
+                    'userid':userid
+                },
+                dataType: 'json',
+                success: function (response) {
+                    var data = eval("("+response+")");
+                    if(data.statu==1){
+                        $("#tiptext").text('该账户已存在');
+                        $("#tip").css("margin-top","-200px");
+                        $("#tip").fadeIn(500)
+                    }
+                }
+            });
+        });
+        $("#btnclose").click( function() {
+            $("#cover").fadeOut(1000);
+        });
+        });
+    </script>
+    <a href="login.html" target="_self" id="back">返回登录</a>
+</div>
+</div>
+</body>
+</html>

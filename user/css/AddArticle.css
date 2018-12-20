@@ -1,0 +1,37 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+ul{
+    list-style: none;
+    padding-left: 0px;
+    margin-top: 20px;
+}
+.bb{
+    width: 100px;
+    text-align: right;
+}
+.aa{
+    position: relative;
+    left: 100px;
+    top:-35px;
+}
+#content{
+    width: 880px;
+    height: 400px;
+}
+#type{
+    display: block;
+    width: 161px;
+    height: 24px;
+}
+#bu{
+    margin-top: -20px;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+}
+#updatebox{
+    display: none;
+}
